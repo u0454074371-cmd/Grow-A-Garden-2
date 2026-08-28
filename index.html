@@ -1,11 +1,10 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta name="theme-color" content="#09140d">
-  <title>Grow Garden 2 — Online</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Grow Garden 2</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="loading">
@@ -17,62 +16,35 @@
   </div>
 </div>
 
-<div id="game" hidden>
-  <canvas id="game-canvas"></canvas>
+<canvas id="world"></canvas>
 
-  <div id="hud">
-    <div class="hud-top">
-      <div class="brand">
-        <span class="brand-mark">🌱</span>
-        <div><strong>Grow Garden 2</strong><small id="online-status">LOCAL MODE</small></div>
-      </div>
-      <div class="wallet">
-        <span>🪙 <b id="hud-coins">0</b></span>
-        <span>💎 <b id="hud-gems">0</b></span>
-        <span>⭐ <b id="hud-level">1</b></span>
-      </div>
-      <button id="settings" class="hud-btn">⚙</button>
+<div id="hud" hidden>
+  <div class="top">
+    <div class="brand"><span>🌱</span><div><b>Grow Garden 2</b><small id="status">LOCAL SAVE</small></div></div>
+    <div class="wallet">
+      <div>🪙 <b id="coins">250</b></div>
+      <div>💎 <b id="gems">10</b></div>
+      <div>⭐ <b id="level">1</b></div>
     </div>
-
-    <div class="crosshair">+</div>
-
-    <div class="left-hud">
-      <div class="quest-card">
-        <small>ACTIVE QUEST</small>
-        <strong id="quest-name">First Harvest</strong>
-        <span id="quest-progress">0 / 10</span>
-        <div class="bar"><i id="quest-bar"></i></div>
-      </div>
-      <div class="control-card">
-        <div><kbd>W A S D</kbd> Move</div>
-        <div><kbd>SHIFT</kbd> Sprint</div>
-        <div><kbd>SPACE</kbd> Jump</div>
-        <div><kbd>E</kbd> Interact</div>
-      </div>
-    </div>
-
-    <div class="bottom-bar">
-      <div class="seed-bar" id="seed-bar"></div>
-      <button id="shop-btn" class="round-action">SHOP</button>
-      <button id="pets-btn" class="round-action">PETS</button>
-    </div>
-
-    <div id="interaction" class="interaction" hidden>
-      <div id="interaction-title">Plant</div>
-      <span>Druk op E</span>
-    </div>
+    <button id="help">?</button>
   </div>
-
-  <div id="mobile-controls" hidden>
-    <div id="joystick"><div id="joystick-stick"></div></div>
-    <button id="mobile-jump">↑</button>
-    <button id="mobile-interact">E</button>
+  <div id="quest"><small>QUEST</small><b>First Harvest</b><span id="questText">0 / 10</span><i><u id="questBar"></u></i></div>
+  <div id="crosshair">+</div>
+  <div id="interaction" hidden><b id="interactionTitle">Plant</b><span>Druk E</span></div>
+  <div id="bottom">
+    <div id="seeds"></div>
+    <button class="big" id="shop">SHOP</button>
+    <button class="big" id="pets">PETS</button>
   </div>
-
-  <div id="panel-root"></div>
-  <div id="toast-root"></div>
+  <div id="toast"></div>
+  <div id="mobile" hidden>
+    <div id="joy"><div id="joyStick"></div></div>
+    <button id="jump">↑</button>
+    <button id="interact">E</button>
+  </div>
+  <div id="helpPanel" hidden></div>
 </div>
 
-<script type="module" src="./scripts/main.js"></script>
+<script src="./scripts/main.js"></script>
 </body>
 </html>
