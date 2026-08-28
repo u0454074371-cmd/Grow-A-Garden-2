@@ -1,28 +1,33 @@
-# Grow Garden 2 — Complete GitHub Pages build
+# Grow Garden 2 — PLAYABLE
 
-Upload the CONTENTS of this folder to the root of your GitHub repository.
+Deze versie is bedoeld om direct op GitHub Pages te draaien.
 
-Required structure:
+Belangrijk:
+- Geen ES modules.
+- Geen Three.js.
+- Geen externe CDN.
+- De game wacht NIET op Firebase.
+- De 3D-achtige wereld en gameplay draaien volledig in `scripts/main.js`.
+- Bij problemen met Firebase blijft de lokale game werken.
+
+Upload de bestanden exact zo:
 
 index.html
 style.css
-.nojekyll
+firebase.rules.json
 scripts/
-  data.js
-  firebase.js
-  game.js
   main.js
-  ui.js
-  world.js
 
-This build does not require Three.js or another CDN for the 3D game.
-Firebase is optional and connects in the background after the game starts.
-If Firebase is unavailable, the game continues with localStorage.
+Besturing:
+WASD lopen
+Shift sprinten
+Spatie springen
+Muis rondkijken
+E interactie
+1-6 is niet nodig; seeds kies je onderaan
 
-Controls:
-- WASD = lopen
-- Shift = sprint
-- Space = springen
-- muis = rondkijken
-- E = interactie
-- 1-6 = seed selecteren
+Klik een leeg tuinveld + E = planten.
+Kijk naar een rijpe crop + E = oogsten.
+
+Voor GitHub Pages:
+Settings → Pages → Deploy from branch → main → /(root)
