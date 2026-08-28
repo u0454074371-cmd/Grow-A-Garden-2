@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#09140d">
+  <title>Grow Garden 2 — Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loading">
+  <div class="loader-card">
+    <div class="loader-logo">🌱</div>
+    <h1>Grow Garden 2</h1>
+    <p id="loading-text">Wereld bouwen...</p>
+    <div class="loader-track"><div id="loading-progress"></div></div>
+  </div>
+</div>
+
+<div id="game" hidden>
+  <canvas id="game-canvas"></canvas>
+
+  <div id="hud">
+    <div class="hud-top">
+      <div class="brand">
+        <span class="brand-mark">🌱</span>
+        <div><strong>Grow Garden 2</strong><small id="online-status">LOCAL MODE</small></div>
+      </div>
+      <div class="wallet">
+        <span>🪙 <b id="hud-coins">0</b></span>
+        <span>💎 <b id="hud-gems">0</b></span>
+        <span>⭐ <b id="hud-level">1</b></span>
+      </div>
+      <button id="settings" class="hud-btn">⚙</button>
+    </div>
+
+    <div class="crosshair">+</div>
+
+    <div class="left-hud">
+      <div class="quest-card">
+        <small>ACTIVE QUEST</small>
+        <strong id="quest-name">First Harvest</strong>
+        <span id="quest-progress">0 / 10</span>
+        <div class="bar"><i id="quest-bar"></i></div>
+      </div>
+      <div class="control-card">
+        <div><kbd>W A S D</kbd> Move</div>
+        <div><kbd>SHIFT</kbd> Sprint</div>
+        <div><kbd>SPACE</kbd> Jump</div>
+        <div><kbd>E</kbd> Interact</div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="seed-bar" id="seed-bar"></div>
+      <button id="shop-btn" class="round-action">SHOP</button>
+      <button id="pets-btn" class="round-action">PETS</button>
+    </div>
+
+    <div id="interaction" class="interaction" hidden>
+      <div id="interaction-title">Plant</div>
+      <span>Druk op E</span>
+    </div>
+  </div>
+
+  <div id="mobile-controls" hidden>
+    <div id="joystick"><div id="joystick-stick"></div></div>
+    <button id="mobile-jump">↑</button>
+    <button id="mobile-interact">E</button>
+  </div>
+
+  <div id="panel-root"></div>
+  <div id="toast-root"></div>
+</div>
+
+<script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
