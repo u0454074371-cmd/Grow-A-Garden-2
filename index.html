@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#09140d">
+<title>Grow Garden 2</title>
+<link rel="stylesheet" href="./style.css?v=7">
+</head>
+<body>
+<div id="game">
+  <canvas id="world" aria-label="Grow Garden 2 game"></canvas>
+
+  <header class="hud">
+    <div class="brand">
+      <div class="brand-icon">🌱</div>
+      <div><b>Grow Garden 2</b><small id="mode">LOCAL SAVE</small></div>
+    </div>
+    <div class="wallet">
+      <div>🪙 <b id="coins">250</b></div>
+      <div>💎 <b id="gems">10</b></div>
+      <div>⭐ <b id="level">1</b></div>
+    </div>
+    <button id="help" class="top-btn">?</button>
+  </header>
+
+  <aside class="quest">
+    <small>QUEST</small>
+    <strong>First Harvest</strong>
+    <span id="quest">0 / 10</span>
+    <div class="progress"><i id="quest-fill"></i></div>
+  </aside>
+
+  <div class="crosshair">+</div>
+  <div id="hint" class="hint" hidden>Druk E om te interacten</div>
+
+  <div class="bottom">
+    <div id="seedbar" class="seedbar"></div>
+    <button class="bottom-btn" id="shop">SHOP</button>
+    <button class="bottom-btn" id="pets">PETS</button>
+  </div>
+
+  <div id="toast"></div>
+  <div id="modal"></div>
+
+  <div id="mobile" hidden>
+    <div id="joystick"><div id="stick"></div></div>
+    <button id="mobile-jump">↑</button>
+    <button id="mobile-use">E</button>
+  </div>
+</div>
+
+<script src="./scripts/main.js?v=7"></script>
+</body>
+</html>
