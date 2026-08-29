@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#09140d">
 <title>Grow Garden 2</title>
-<link rel="stylesheet" href="./style.css?v=7">
+<link rel="stylesheet" href="./style.css?v=1">
 </head>
 <body>
 <div id="game">
@@ -17,27 +17,31 @@
       <div><b>Grow Garden 2</b><small id="mode">LOCAL SAVE</small></div>
     </div>
     <div class="wallet">
-      <div>🪙 <b id="coins">250</b></div>
-      <div>💎 <b id="gems">10</b></div>
+      <div>🪙 <b id="coins">100</b></div>
+      <div>💎 <b id="gems">0</b></div>
       <div>⭐ <b id="level">1</b></div>
+      <div id="petbar" class="petbar"></div>
     </div>
-    <button id="help" class="top-btn">?</button>
+    <div class="topbtns">
+      <button id="ach" class="top-btn" title="Prestaties">🏆</button>
+      <button id="rebirth" class="top-btn" title="Herboren worden">🌳</button>
+      <button id="help" class="top-btn" title="Besturing">?</button>
+    </div>
   </header>
 
-  <aside class="quest">
-    <small>QUEST</small>
-    <strong>First Harvest</strong>
-    <span id="quest">0 / 10</span>
-    <div class="progress"><i id="quest-fill"></i></div>
-  </aside>
+  <aside class="quests" id="quests"></aside>
+
+  <div class="daynight" id="daynight">☀️</div>
 
   <div class="crosshair">+</div>
   <div id="hint" class="hint" hidden>Druk E om te interacten</div>
 
   <div class="bottom">
+    <button class="tool-btn" id="water-toggle" title="Gieter">💧</button>
     <div id="seedbar" class="seedbar"></div>
     <button class="bottom-btn" id="shop">SHOP</button>
     <button class="bottom-btn" id="pets">PETS</button>
+    <button class="bottom-btn sell" id="sell">RUGZAK</button>
   </div>
 
   <div id="toast"></div>
@@ -50,6 +54,6 @@
   </div>
 </div>
 
-<script src="./scripts/main.js?v=7"></script>
+<script src="./scripts/main.js?v=1"></script>
 </body>
 </html>
